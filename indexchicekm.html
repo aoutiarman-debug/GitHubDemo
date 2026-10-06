@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chicken House - Login</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fff4e6;
+    }
+
+    .login-box {
+      width: 900px;
+      max-width: 95%;
+      min-height: 520px;
+      display: flex;
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+    }
+
+    .image-section {
+      width: 50%;
+      background:
+        linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+        url("https://images.unsplash.com/photo-1598103442097-8b74394b95c6?auto=format&fit=crop&w=900&q=80")
+        center/cover;
+      display: flex;
+      align-items: flex-end;
+      padding: 35px;
+      color: white;
+    }
+
+    .image-section h1 {
+      font-size: 38px;
+      text-shadow: 2px 2px 5px #000;
+    }
+
+    .image-section p {
+      margin-top: 8px;
+      font-size: 16px;
+    }
+
+    .form-section {
+      width: 50%;
+      padding: 60px 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .logo {
+      font-size: 42px;
+      text-align: center;
+      margin-bottom: 5px;
+    }
+
+    .form-section h2 {
+      text-align: center;
+      color: #222;
+      margin-bottom: 8px;
+    }
+
+    .welcome {
+      text-align: center;
+      color: #777;
+      margin-bottom: 30px;
+    }
+
+    .input-group {
+      margin-bottom: 18px;
+    }
+
+    .input-group label {
+      display: block;
+      margin-bottom: 7px;
+      color: #444;
+      font-weight: bold;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 15px;
+      outline: none;
+    }
+
+    .input-group input:focus {
+      border-color: #e85d04;
+      box-shadow: 0 0 5px rgba(232, 93, 4, 0.2);
+    }
+
+    .forgot {
+      display: block;
+      text-align: right;
+      margin: -5px 0 20px;
+      color: #e85d04;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .login-btn {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 8px;
+      background: #e85d04;
+      color: white;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .login-btn:hover {
+      background: #c94d00;
+      transform: translateY(-1px);
+    }
+
+    .signup {
+      text-align: center;
+      margin-top: 22px;
+      color: #777;
+    }
+
+    .signup a {
+      color: #e85d04;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    @media (max-width: 700px) {
+      .login-box {
+        flex-direction: column;
+      }
+
+      .image-section,
+      .form-section {
+        width: 100%;
+      }
+
+      .image-section {
+        min-height: 220px;
+      }
+
+      .form-section {
+        padding: 40px 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="login-box">
+
+    <!-- Chicken Image -->
+    <div class="image-section">
+      <div>
+        <h1>🍗 Chicken House</h1>
+        <p>Fresh • Crispy • Delicious</p>
+      </div>
+    </div>
+
+    <!-- Login Form -->
+    <div class="form-section">
+
+      <div class="logo">🍗</div>
+
+      <h2>Welcome Back!</h2>
+      <p class="welcome">Login to your Chicken House account</p>
+
+      <form action="/login" method="POST">
+
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          >
+        </div>
+
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+            required
+          >
+        </div>
+
+        <a href="/forgot-password" class="forgot">
+          Forgot Password?
+        </a>
+
+        <button type="submit" class="login-btn">
+          Login
+        </button>
+
+      </form>
+
+      <div class="signup">
+        New customer?
+        <a href="/signup">Create an account</a>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
